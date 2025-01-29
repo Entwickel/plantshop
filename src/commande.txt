@@ -1,0 +1,11 @@
+#installe les dépendances
+yarn
+npm install
+
+#lance l'application
+yarn start
+npm start
+
+#crée une application react
+yarn create react-app plantshop
+npm init react-app plantshop
