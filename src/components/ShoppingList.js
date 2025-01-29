@@ -1,18 +1,10 @@
 import React from 'react';
-
-const plantList = [
-  'monstera',
-  'ficus lyrata',
-  'pothos argenté',
-  'yucca',
-  'palmier'
-];
+import { plantList } from '../datas/plantList';
 
 const extractCategories = (plants) => {
   return plants.reduce((categories, plant) => {
     //on prend le premier nom de chaque plante pour en faire une catégorie
-    const category = plant.split(' ')[0].toLowerCase();
-    categories.push(category);
+    categories.push(plants.category);
     return categories;
   }, []);
 };
