@@ -9,3 +9,4 @@ npm start
 #crée une application react
 yarn create react-app plantshop
 npm init react-app plantshop
+

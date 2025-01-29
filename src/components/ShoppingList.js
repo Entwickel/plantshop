@@ -13,6 +13,9 @@ const extractCategories = (plants) => {
     }, []);
   };
   
+function handleClick(){
+  console.log("click sur element")
+}
 function ShoppingList() {
 
     const categories = extractCategories(plantList);
@@ -25,12 +28,18 @@ function ShoppingList() {
           <li key={`${category}-${category}`}> {category}</li>
         ))}
       </ul>
-      
+
       <h2>Plantes à vendre</h2>
       <ul>
       {plantList.map((plant) => (
-          <li key={plant.id}>
-          {plant.name} {plant.isBestSale && <span>🔥</span>} <CareScale careType ='water' scaleValue= {plant.water}/><CareScale careType='light' scaleValue = {plant.light}/>
+          <li onClick={handleClick} key={plant.id}>
+            <img className='lmj-plant-item-cover' src = {plant.cover}/>
+            {plant.name} {plant.isBestSale && <span>🔥</span>} 
+            <div>
+            <CareScale careType ='water' scaleValue= {plant.water}/>
+            <CareScale careType='light' scaleValue = {plant.light}/>
+            
+              </div>
             </li>
         ))}
       </ul>
