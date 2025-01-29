@@ -27,8 +27,10 @@ function ShoppingList() {
       
       <h2>Plantes à vendre</h2>
       <ul>
-        {plantList.map((plant) => (
-          <li key={plant.id}>{plant.name}</li>
+      {plantList.map((plant) => (
+          <li key={plant.id}>
+          {plant.name} {plant.isBestSale ? <span>🔥</span> : <span>👎</span>}
+            </li>
         ))}
       </ul>
     </div>
