@@ -12,9 +12,7 @@ const extractCategories = (plants) => {
   return plants.reduce((categories, plant) => {
     //on prend le premier nom de chaque plante pour en faire une catégorie
     const category = plant.split(' ')[0].toLowerCase();
-    if (!categories.includes(category)) {
-      categories.push(category);
-    }
+    categories.push(category);
     return categories;
   }, []);
 };
