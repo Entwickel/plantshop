@@ -13,8 +13,8 @@ const extractCategories = (plants) => {
     }, []);
   };
   
-function handleClick(){
-  console.log("click sur element")
+function handleClick(plantName){
+  alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix 🌱✨`)
 }
 function ShoppingList() {
 
@@ -32,7 +32,7 @@ function ShoppingList() {
       <h2>Plantes à vendre</h2>
       <ul>
       {plantList.map((plant) => (
-          <li onClick={handleClick} key={plant.id}>
+          <li onClick={ () => handleClick(plant.name)} key={plant.id}>
             <img className='lmj-plant-item-cover' src = {plant.cover}/>
             {plant.name} {plant.isBestSale && <span>🔥</span>} 
             <div>
