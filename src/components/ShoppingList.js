@@ -1,5 +1,6 @@
 import React from 'react';
 import { plantList } from '../datas/plantList';
+import CareScale from './Carescale';
 
 const extractCategories = (plants) => {
     var categories = []
@@ -29,7 +30,7 @@ function ShoppingList() {
       <ul>
       {plantList.map((plant) => (
           <li key={plant.id}>
-          {plant.name} {plant.isBestSale && <span>🔥</span>}
+          {plant.name} {plant.isBestSale && <span>🔥</span>} <CareScale scaleValue= {plant.light}/>
             </li>
         ))}
       </ul>
