@@ -2,10 +2,11 @@ import React from 'react';
 import { plantList } from '../datas/plantList';
 
 const extractCategories = (plants) => {
-    return plants.reduce((categories, plant) => {
+    var categories = []
+    return plants.reduce((plants, plant) => {
       //on prend le premier nom de chaque plante pour en faire une catégorie
-      if (!categories.includes(plants.category)) {
-        categories.push(plants.category);
+      if (!categories.includes(plant.category)) {
+        categories.push(plant.category);
     }
         return categories;
     }, []);
@@ -20,14 +21,14 @@ function ShoppingList() {
       <h2>Catégories de plantes</h2>
       <ul>
         {categories.map((category) => (
-          <li key={category}>{category}</li>
+          <li key={`${category}-${category}`}> {category}</li>
         ))}
       </ul>
       
       <h2>Plantes à vendre</h2>
       <ul>
         {plantList.map((plant) => (
-          <li key={`${plant}-${plant.id}`}>{plant.name}</li>
+          <li key={plant.id}>{plant.name}</li>
         ))}
       </ul>
     </div>
