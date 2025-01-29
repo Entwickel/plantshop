@@ -4,7 +4,7 @@ export const plantList = [
 		category: 'classique',
 		id: '1ed',
 		isBestSale: true,
-		water : 50,
+		water : 3,
 		light : 1
 	},
 	{
@@ -12,7 +12,7 @@ export const plantList = [
 		category: 'classique',
 		id: '2ab',
 		isBestSale: false,
-		water : 50,
+		water : 2,
 		light : 2
 	},
 	{
@@ -20,7 +20,7 @@ export const plantList = [
 		category: 'classique',
 		id: '3sd',
 		isBestSale: false,
-		water : 50,
+		water : 2,
 		light : 2
 	},
 	{
@@ -28,7 +28,7 @@ export const plantList = [
 		category: 'classique',
 		id: '4kk',
 		isBestSale: false,
-		water : 50,
+		water : 2,
 		light : 2
 	},
 	{
@@ -36,7 +36,7 @@ export const plantList = [
 		category: 'extérieur',
 		id: '5pl',
 		isBestSale: false,
-		water : 50,
+		water : 3,
 		light : 2
 	},
 	{
@@ -44,7 +44,7 @@ export const plantList = [
 		category: 'extérieur',
 		id: '6uo',
 		isBestSale: false,
-		water : 50,
+		water : 2,
 		light : 2
 	},
 	{
@@ -52,7 +52,7 @@ export const plantList = [
 		category: 'extérieur',
 		id: '7ie',
 		isBestSale: true,
-		water : 50,
+		water : 2,
 		light : 2
 	},
 	{
@@ -60,7 +60,7 @@ export const plantList = [
 		category: 'plante grasse',
 		id: '8fp',
 		isBestSale: false,
-		water : 50,
+		water : 1,
 		light : 2
 	},
 	{
@@ -68,7 +68,7 @@ export const plantList = [
 		category: 'plante grasse',
 		id: '9vn',
 		isBestSale: false,
-		water : 50,
+		water : 1,
 		light : 2
 	}
 ]
