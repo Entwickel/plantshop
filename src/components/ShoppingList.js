@@ -13,10 +13,10 @@ const extractCategories = (plants) => {
     }, []);
   };
   
-function handleClick(plantName){
+function handleClick(plantName,updateCart){
   alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix 🌱✨`)
 }
-function ShoppingList() {
+function ShoppingList({cart, updateCart}) {
 
     const categories = extractCategories(plantList);
   
@@ -32,13 +32,13 @@ function ShoppingList() {
       <h2>Plantes à vendre</h2>
       <ul>
       {plantList.map((plant) => (
-          <li onClick={ () => handleClick(plant.name)} key={plant.id}>
+          <li onClick={ () => handleClick(plant.name,updateCart(cart + 1))} key={plant.id}>
             <img className='lmj-plant-item-cover' src = {plant.cover}/>
             {plant.name} {plant.isBestSale && <span>🔥</span>} 
             <div>
             <CareScale careType ='water' scaleValue= {plant.water}/>
             <CareScale careType='light' scaleValue = {plant.light}/>
-            
+            <button>Ajouter</button>
               </div>
             </li>
         ))}
